@@ -63,6 +63,15 @@ class Program
             }
             #endregion
 
+            #region Case b: BCL Delegate Func<Book, string> (GetPrice)
+            Console.WriteLine("\nCase b) BCL Func Delegate:");
+            Func<Book, string> fPtrB = BookFunctions.GetBookPrice;
+            foreach (Book B in books)
+            {
+                Console.WriteLine(fPtrB(B));
+            }
+            #endregion
+
         }
     }
 }
