@@ -84,6 +84,15 @@ class Program
             }
             #endregion
 
-        }
+            #region Case d: Lambda Expression (GetPublicationDate)
+            Console.WriteLine("\nCase d) Lambda Expression:");
+            BookDelegate_GetDate fPtrD = (Book B) => B.PublicationDate.ToShortDateString();
+            foreach (Book B in books)
+            {
+                Console.WriteLine(fPtrD(B));
+            }
+            #endregion
+        
+    }
     }
 }
