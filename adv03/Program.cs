@@ -72,6 +72,18 @@ class Program
             }
             #endregion
 
+            #region Case c: Anonymous Method (GetISBN)
+            Console.WriteLine("\nCase c) Anonymous Method:");
+            BookDelegate_GetISBN fPtrC = delegate (Book B)
+            {
+                return B.ISBN;
+            };
+            foreach (Book B in books)
+            {
+                Console.WriteLine(fPtrC(B));
+            }
+            #endregion
+
         }
     }
 }
